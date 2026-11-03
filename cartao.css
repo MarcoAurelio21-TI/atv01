@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 40px 0;
+}
+
+.cartao {
+  width: 300px;
+  padding: 20px;
+  border: 2px solid #2a6f97;
+  margin: 16px auto;
+  background-color: white;
+  /* box-sizing: border-box;  <-- coloque aqui para testar a pergunta 2 */
+}
+
+/* ============================================================
+   RESPOSTAS DO DESAFIO
+   ============================================================
+
+   1) SEM box-sizing (valor padrão = content-box):
+      A largura total do cartão é:
+      width (300px) + padding esquerda (20px) + padding direita (20px)
+      + border esquerda (2px) + border direita (2px)
+      = 300 + 20 + 20 + 2 + 2
+      = 344px de largura total na tela.
+
+   2) COM box-sizing: border-box no .cartao:
+      A largura total passa a ser exatamente 300px.
+      O padding e a borda são "descontados" de dentro dos 300px,
+      então o conteúdo interno fica com 300 - 20 - 20 - 2 - 2 = 256px.
+
+   3) Por que margin: 16px auto centraliza o cartão?
+      O primeiro valor (16px) define a margem em cima e embaixo.
+      O segundo valor (auto) define margem esquerda e direita como
+      "automáticas": o navegador divide o espaço livre igualmente
+      entre os dois lados. Como o cartão tem largura fixa (300px),
+      sobra espaço nas laterais e ele fica centralizado horizontalmente.
+   ============================================================ */
